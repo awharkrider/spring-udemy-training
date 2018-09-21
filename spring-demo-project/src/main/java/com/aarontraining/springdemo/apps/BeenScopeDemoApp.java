@@ -3,6 +3,9 @@ package com.aarontraining.springdemo.apps;
 import com.aarontraining.springdemo.Coach;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * App demonstrating bean scope from section 6
+ */
 public class BeenScopeDemoApp {
     
     public static void main(String[] args) {

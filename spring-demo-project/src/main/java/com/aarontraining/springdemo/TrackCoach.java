@@ -25,4 +25,18 @@ public class TrackCoach implements Coach {
         fortuneService = theFortuneService;
         
     }
+    
+    /**
+     * init method to do initialization stuff in the bean
+     */
+    private void setupTrackCoach() {
+        System.out.println("TrackCoach: inside method 'setupTrackCoach' -- init method --");
+    }
+    
+    /**
+     * destroy method: to clean up the bean
+     */
+    public void cleanupTrackCoach() {
+        System.out.println("TrackCoach: inside method 'cleanupTrackCoach' -- destroy method --");
+    }
 }
