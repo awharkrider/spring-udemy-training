@@ -11,3 +11,4 @@
 .idea/
 lib/
 /test-output
+target/
