@@ -13,17 +13,12 @@
 
     <!-- Beans with dependency injection -->
     <bean id="myCoach"
-          class="com.aarontraining.springdemo.TrackCoach">
+          class="com.aarontraining.springdemo.TrackCoach"
+          scope="prototype">
+        <!-- Prototype means a new object with each request -->
 
         <!--  constructor injection -->
         <constructor-arg ref="myFortuneService"/>
-    </bean>
-
-    <bean id="yourCoach" class="com.aarontraining.springdemo.HockeyCoach">
-        <constructor-arg ref="myFortuneService"/>
-
-        <!-- Setter injection-->
-        <!--<property name="fortuneService" ref="myFortuneService"/>-->
     </bean>
 
 
