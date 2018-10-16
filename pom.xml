@@ -13,6 +13,7 @@
         <module>maven-example-project</module>
         <module>maven-example-webapp</module>
         <module>spring-demo-one</module>
+        <module>spring-demo-annotations</module>
     </modules>
 
     <properties>
