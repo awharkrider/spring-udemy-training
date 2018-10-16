@@ -11,12 +11,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class ChessCoach implements Coach {
     
+    /**
+     * Setter Injection
+     */
     @Autowired
     public void setFortuneService(FortuneService fortuneService) {
         System.out.println(">> ChessCoach: setter injecting FortuneService through @Autowired");
         this.fortuneService = fortuneService;
     }
     
+    //    @Autowired  // <--- Field Injection, not recommended by spring.
     private FortuneService fortuneService;
     
     public ChessCoach() {
