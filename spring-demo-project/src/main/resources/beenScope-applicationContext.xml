@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- dependencies to inject -->
+    <bean id="myFortuneService"
+          class="com.aarontraining.springdemo.fortune_service.HappyFortuneService">
+    </bean>
+
+
+    <!-- Beans with dependency injection -->
+    <bean id="myCoach"
+          class="com.aarontraining.springdemo.TrackCoach"
+          scope="prototype">
+        <!-- Prototype means a new object with each request -->
+
+        <!--  constructor injection -->
+        <constructor-arg ref="myFortuneService"/>
+    </bean>
+
+
+</beans>
