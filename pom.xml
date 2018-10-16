@@ -12,7 +12,7 @@
     <modules>
         <module>maven-example-project</module>
         <module>maven-example-webapp</module>
-        <module>spring-demo-project</module>
+        <module>spring-demo-one</module>
     </modules>
 
     <properties>
