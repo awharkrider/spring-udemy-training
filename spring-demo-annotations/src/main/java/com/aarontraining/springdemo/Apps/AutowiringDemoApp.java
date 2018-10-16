@@ -1,7 +1,7 @@
 package com.aarontraining.springdemo.Apps;
 
+import com.aarontraining.springdemo.Models.ChessCoach;
 import com.aarontraining.springdemo.Models.Coach;
-import com.aarontraining.springdemo.Models.TableTennisCoach;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -13,7 +13,7 @@ public class AutowiringDemoApp {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         
         //get the bean from spring container
-        Coach theCoach = context.getBean(TableTennisCoach.class); //
+        Coach theCoach = context.getBean(ChessCoach.class);
         
         // Call a method on the bean
         System.out.println(theCoach.getDailyWorkout());
@@ -22,6 +22,5 @@ public class AutowiringDemoApp {
         
         //close the context
         context.close();
-        
     }
 }

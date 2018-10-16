@@ -5,6 +5,10 @@ import com.aarontraining.springdemo.fortune_service.FortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
+/**
+ * Class for section 8 @Autowired constructor injection
+ */
 @Component
 public class TableTennisCoach implements Coach {
     
@@ -12,13 +16,13 @@ public class TableTennisCoach implements Coach {
     
     @Autowired
     public TableTennisCoach(FortuneService theFortuneService) {
-        System.out.println("injecting FortuneService through @Autowired");
+        System.out.println(">> TableTennisCoach: injecting FortuneService through @Autowired");
         fortuneService = theFortuneService;
     }
     
     @Override
     public String getDailyWorkout() {
-        return "Practice your bounce return";
+        return "TableTennisCoach: Practice your bounce return";
     }
     
     @Override
