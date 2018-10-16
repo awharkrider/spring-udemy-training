@@ -3,8 +3,8 @@ package com.aarontraining.springdemo.Models;
 import com.aarontraining.springdemo.fortune_service.FortuneService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-
 
 /**
  * Class for section 8 @Autowired constructor injection
@@ -12,13 +12,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class TableTennisCoach implements Coach {
     
+    @Autowired // <--- Field Injection, not recommended by spring.
+    @Qualifier("happyFortuneService")
     private FortuneService fortuneService;
     
-    @Autowired
-    public TableTennisCoach(FortuneService theFortuneService) {
-        System.out.println(">> TableTennisCoach: injecting FortuneService through @Autowired");
-        fortuneService = theFortuneService;
-    }
+    public TableTennisCoach() {}
     
     @Override
     public String getDailyWorkout() {

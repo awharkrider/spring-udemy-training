@@ -3,11 +3,10 @@ package com.aarontraining.springdemo.fortune_service;
 import org.springframework.stereotype.Component;
 
 /**
- * Section 7: Spring autowired dependency injection
+ * Section 8: Spring autowired dependency injection with @Qualifier
  */
 @Component
-public class HappyFortuneService implements FortuneService {
-
+public class DatabaseFortuneService implements FortuneService {
     
     /**
      * Simple fortune
@@ -16,8 +15,7 @@ public class HappyFortuneService implements FortuneService {
      */
     @Override
     public String getFortune() {
-        return "Today is your lucky day!";
+        return "DATABASE Fortune";
     }
     
-
 }

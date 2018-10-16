@@ -7,7 +7,5 @@ package com.aarontraining.springdemo.fortune_service;
 public interface FortuneService {
     
     public String getFortune();
-    
-    public String getRandomFortune();
-    
+
 }

@@ -3,6 +3,7 @@ package com.aarontraining.springdemo.Models;
 import com.aarontraining.springdemo.fortune_service.FortuneService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,12 +16,12 @@ public class ChessCoach implements Coach {
      * Setter Injection
      */
     @Autowired
+    @Qualifier("cookieFortuneService")
     public void setFortuneService(FortuneService fortuneService) {
         System.out.println(">> ChessCoach: setter injecting FortuneService through @Autowired");
         this.fortuneService = fortuneService;
     }
     
-    //    @Autowired  // <--- Field Injection, not recommended by spring.
     private FortuneService fortuneService;
     
     public ChessCoach() {
